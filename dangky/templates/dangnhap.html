@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body class="hinhnen" >
+    <div align="center"><h1>Đăng nhập</h1></div>
+   <form action="{%url 'xuly_dangnhap' %}">
+    <table align="center">
+        <tr>
+            <td>T&ecirc;n đăng nhập</td>
+            <td><input type="text" name="ten" id="ten"></td>
+        </tr>
+        <tr>
+            <td>Mật khẩu</td>
+            <td><input type="password" name="mk" id="mk"></td>
+        </tr>
+        <tr>
+            <td align="center" >&nbsp;</td>
+            <td><input type="submit" name="submit" id="submit"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html> 

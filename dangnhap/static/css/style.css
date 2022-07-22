@@ -1,0 +1,7 @@
+body{
+    background-color: blueviolet;
+}
+.hinhnen {
+    background: url("/static/img/background.png") 50% 0 no-repeat fixed;
+    background-color: rgb(43, 119, 226);
+}

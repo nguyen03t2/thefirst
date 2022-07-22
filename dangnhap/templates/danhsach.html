@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center"><h1>DANH SÁCH NHÂN VIÊN</h1></div>
+    {%if ds_nhanvien%}
+    <table border="1" align="center">
+        <thead>
+            <tr> 
+                <td><strong>Tên đăng nhập</strong></td>
+                <td><strong>Chức vụ</strong></td>
+                <td><strong>Năm sinh</strong></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {%for dt in ds_nhanvien%}
+            <tr>
+                <td>{{dt.ho_ten}}</td>
+                <td>{{dt.chuc_vu}}</td>
+                <td>{{dt.nam_sinh}}</td>
+                <td><a href="{% url 'chi_tiet' dt.id %}">Chọn</a></td>
+                <td><a href="{% url 'xoa_nv' dt.id %}">Xóa</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    {%else %}
+    <p> Chưa có dữ liệu </p>
+    {%endif%}
+    <div align="center"><a href="{% url 'themnhanvien' %}">Thêm nhân viên</a></div>
+</body>
+</html>
